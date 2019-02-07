@@ -5,7 +5,7 @@ body{
 
 nav{
     display: flex;
-    background: rgb(99, 7, 99);
+    background: rgba(0, 0, 0, 0.836);
 }
 
 ul{
@@ -26,12 +26,28 @@ a{
 }
 
 .block{
-    height: 150px;
+    height: 250px;
 }
 
-.block:nth-child(odd){
-    background: rgb(94, 255, 0);
-}
 .block:nth-child(even){
+    background: rgb(0, 204, 255);
+}
+.block:nth-child(odd){
     background:rgb(13, 13, 32);
+}
+
+#scrolltop{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    height: 100px;
+    width: 100px;
+    background:rgb(13, 13, 32);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    transition: 0.5s;
 }
