@@ -41,3 +41,36 @@ $(window).on("scroll",function(){
 // lorsque positionY est supérieur à 100
     // réduire height de la nav
     // positionner la nav en fixe en haut de la page
+
+/* slider */
+
+var slideIndex = 0;
+var slides = $(".slides");
+
+showSlide(slideIndex);
+
+function showSlide(numberSlide){
+    let idSlide = slides[numberSlide].id;
+    $(".slides").removeClass("active");
+    $(`#${idSlide}`).addClass("active");
+}
+
+$(".arrow").on("click",function(){
+
+    
+    if($(this).hasClass("prev")){
+        slideIndex--;
+        if(slideIndex < 0){
+            slideIndex = slides.length - 1;
+        }
+        showSlide(slideIndex);
+    }
+
+    if($(this).hasClass("next")){
+        slideIndex++;
+        if(slideIndex > slides.length -1){
+            slideIndex = 0;
+        }
+        showSlide(slideIndex);
+    }
+})

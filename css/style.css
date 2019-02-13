@@ -5,7 +5,7 @@ body{
 
 nav{
     display: flex;
-    background: rgba(0, 0, 0, 0.836);
+    background: rgb(0, 255, 179);
 }
 
 ul{
@@ -26,7 +26,7 @@ a{
 }
 
 .block{
-    height: 250px;
+    height: 350px;
 }
 
 .block:nth-child(even){
@@ -50,4 +50,41 @@ a{
     align-items: center;
     font-size: 40px;
     transition: 0.5s;
+}
+
+/* slider */
+
+.slidesshow-container{
+    max-width: 300px;
+    position: absolute;
+}
+.text{
+    position: absolute;
+    bottom: 50px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+.prev, .next{
+    position: absolute;
+    top: 30%;
+    color: #fff;
+    font-size: 40px;
+}
+.prev:hover, .next:hover{
+    cursor: pointer;
+    color: blue;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+.slides{
+    display: none;
+}
+.active{
+    display: block;
 }
